@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+<script>
+    const labels = [
+        `january`,
+        `February`,
+        `march`,
+        `April`,
+        `may`,
+        `june`,
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My firts dataset',
+            backgroundColor: 'rgb (255, 99, 132)',
+            borderColor: 'rgb (255, 99, 132)',
+            date: [0+10, 10+10, 5+10, 2+10, 20+10, 30+10, 45+10],
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    }
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    )
+</script>
+</html>
+
